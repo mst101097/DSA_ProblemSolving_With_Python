@@ -15,4 +15,12 @@ Recursion  -- has Recusion Problem Soluation
     7. Power of Element
     8. Recursion With String
     9. Sum of Array
+
+DataStructure -- it has all topic in DSA
+
+ArrayProblem - it is a collection of arrayProblem
+    1 . find max min in Array
+    2 . Unique Element in Array
+    3 . Intersect of two Array
+    4 . Array Rotation Particular Index
     
