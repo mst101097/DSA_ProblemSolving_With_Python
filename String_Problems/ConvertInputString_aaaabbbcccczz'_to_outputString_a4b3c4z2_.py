@@ -3,6 +3,8 @@
 #inputString = "aaaabbbcccczz"
 #outputString = "a4b3c4z2"
 
+# 1st Method
+
 inputStr = input("Enter String : ")
 n = len(inputStr)
 previousChar = inputStr[0]
@@ -27,5 +29,40 @@ while i<n:
     
 print("outputString : ", output)
 
-# Enter String : aaaabbbcccczz
-# outputString :   a4b3c4z2
+Enter String : aaaabbbcccczz
+outputString :   a4b3c4z2
+
+
+# 2nd Method (Using Dict() dataStructure)
+
+S = 'aaaabbbcccczz'
+charDict = {}
+
+for ch in S:
+    charDict[ch] = charDict.get(ch,0)+1
+
+# print(charDict) # {'a': 4, 'b': 3, 'c': 4, 'z': 2}
+
+output = ""
+
+for k,v in charDict.items():
+    output = output+str(v)+k
+
+print("output : ", output)
+#output :  4a3b4c2z
+
+# if you want the this type a4b3c4z2  then changes the some code accoordingly
+
+# for k,v in charDict.items():
+#     output = output+k+str(v)
+
+# print("output : ", output)
+#output will be a4b3c4z2
+
+
+
+
+
+
+
+
