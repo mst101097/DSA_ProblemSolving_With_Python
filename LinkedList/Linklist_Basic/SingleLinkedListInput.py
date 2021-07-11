@@ -14,6 +14,60 @@ def printLinkList(head):
         print("None")
         return
 
+
+def lengthOfLinklist(head):
+    count = 0
+    while head is not None:
+        count = count+1
+        head = head.next
+    return count
+
+
+def insertAtIR(head,i,data):
+    # recursivly insert element in linklist in Ith Position 
+
+    if i<0:
+        return head
+    
+    if i==0:
+        newNode =  Node(data)
+        newNode.next = head
+        return newNode
+
+    if head is None:
+        return None
+    smallhead = insertAtIR(head.next,i-1,data)
+    head.next = smallhead
+    return head
+
+def insertAtI(head,i,data):
+
+    # this is itratively approch to insert an element in linklist Ith position 
+
+    if i<0 or i>lengthOfLinklist(head):
+        return head
+
+    count = 0
+    prev = None
+    curr = head
+
+    while count<i:
+        prev = curr
+        curr = curr.next
+        count = count+1
+
+    newNode = Node(data)
+    if prev is not None:
+        prev.next = newNode
+    else:
+        head = newNode
+    newNode.next = curr
+
+    return head
+
+
+
+
 # first method to take input
 # def takeInput():
 #     inputList = [int(element) for element in input().split()]
@@ -59,6 +113,11 @@ def takeInputSecondMethod():
 
 head = takeInputSecondMethod()
 printLinkList(head)
+insertAtIR(head,2,9)
+printLinkList(head)
+insertAtIR(head,0,10)
+printLinkList(head)
+
 
 
 
