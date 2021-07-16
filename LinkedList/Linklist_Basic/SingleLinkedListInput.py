@@ -23,6 +23,20 @@ def lengthOfLinklist(head):
     return count
 
 
+# Print ith node in Linklist
+
+def printIthNode(head,i):
+    curr = head
+    counter = 0
+
+    while counter<i and curr != None:
+            curr = curr.next
+            counter = counter + 1
+
+    print(curr.data)
+
+
+
 def insertAtIR(head,i,data):
     # recursivly insert element in linklist in Ith Position 
 
@@ -64,6 +78,33 @@ def insertAtI(head,i,data):
     newNode.next = curr
 
     return head
+
+
+# this method used for delete a node with  given value
+def deleteANode(head,val):
+
+    # condition 1 if head is empty
+    if head is None:
+        print('Linklist is Empty !')
+
+    # condition 2 if delete value is head value
+    if head.data == val:
+        head = head.next
+
+    # than given value if node head value but have in mid in linklist
+    temp = head
+    while temp.next is not None:
+
+        if temp.data ==val:
+            break
+        temp = temp.next
+
+    if temp.next is None:
+        print('Node is not find in Linklist !')
+
+    else:
+        temp.next = temp.next.next
+
 
 
 
@@ -117,8 +158,9 @@ insertAtIR(head,2,9)
 printLinkList(head)
 insertAtIR(head,0,10)
 printLinkList(head)
+printIthNode(head,2)
+deleteANode(head,3)
+printLinkList(head)
 
 
 
-
-        
