@@ -1,5 +1,12 @@
 class Soluation:
     def VaildAnagram(self, s:str,t:str) -> bool:
+        # method 3 with sorted method 
+        #return sorted(s) == sorted(t)
+        
+        #method 2 with inbuild counter function
+        #return Counter(s) == Counter(t)
+        
+        # method 1
         if len(s) != len(t):
             return False
         
