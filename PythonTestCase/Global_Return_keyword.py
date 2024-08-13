@@ -5,7 +5,6 @@
 '''
 Track back error.
 NameError: name 'result' is not defined
-
 '''
 
 # if declare result as Global then result will be change
