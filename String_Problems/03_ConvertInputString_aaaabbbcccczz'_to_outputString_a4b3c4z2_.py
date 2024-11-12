@@ -29,8 +29,8 @@ while i<n:
     
 print("outputString : ", output)
 
-Enter String : aaaabbbcccczz
-outputString :   a4b3c4z2
+# Enter String : aaaabbbcccczz
+# outputString :   a4b3c4z2
 
 
 # 2nd Method (Using Dict() dataStructure)

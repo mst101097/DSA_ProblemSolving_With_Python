@@ -40,7 +40,8 @@ def findBracketBalance(str1):
 		return False
 	return True
 
-inputStr = "{()[]"
+# inputStr = "{()[]"
+inputStr = "[()]{}{[()()]()}"
 
 if findBracketBalance(inputStr):
 	print('Balanced String ')
